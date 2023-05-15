@@ -1,0 +1,75 @@
+\documentclass[journal,12pt,two column]{IEEEtran}
+%\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage[export]{adjustbox}
+\usepackage{bm}
+\def\inputGnumericTable{} 
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array} 
+\usepackage{longtable} 
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}  
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{color}                                            %%
+\usepackage{array}                                            %%
+\usepackage{caption} 
+\usepackage{graphicx}
+
+\title{A1110 Assignment 1 \\ 11.16.3.8}
+\author{Megavath Anil Nayak \\ AI22BTECH11019 \\
+        \thanks{*The student is from Department of Chemical Engineering, Indian Institute of Technology, Hydeabad. e-mail: ai22btech11019iith.ac.in}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\renewcommand{\thetable}{\arabic{table}} 
+\newcommand{\question}{\noindent \textbf{Question: }}	
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\begin{document}
+\maketitle
+\question: 8 : Three coins are tossed once. Find the probability of getting:\\
+$(i)$ 3 heads  $(ii)$2 heads   $(iii)$ Atleast 2 heads \\
+$(iv)$ Atmost 2 heads  $(v)$ No head  $(vi)$ 3 tails  \\
+$(vii)$ Exactly 2 tails  $(viii)$ No tail  $(ix)$ Atmost 2 tails \\
+\solution : Let $X$ be a random variable such that:
+    \begin{align*} 
+         X \coloneqq Number of heads \\\\
+         X 
+         \begin{cases}
+            0, \\
+            1, \\
+            2, \\
+            3 \\
+         \end{cases}
+    \end{align*}
+    Let $S$ denote sample space of possible outcomes when the coins are tossed. \\
+    Then $\mid S \mid = 2^3 = 8$ \\\\
+    (i) \pr{X  = 3} = $\frac{1}{8}$ \\\\
+    (ii) \pr{X = 2} = $\frac{^3C_2}{8} = \frac{3}{8}$ \\\\
+    (iii) \pr{X \geq 2} = $\frac{^3C_3 + ^3C_2}{8} = \frac{4}{8}$ \\\\
+    (iv) \pr{X \leq 2} = $\frac{8 - ^3C_3}{8} = \frac{7}{8}$ \\\\
+    (v) \pr{X = 0} = $\frac{^3C_0}{8} = \frac{1}{8}$ \\\\
+    (vi) \pr{X = 0} = $\frac{^3C_0}{8} = \frac{1}{8}    (\because 3 tails \equiv 0 heads)$ \\\\
+    (vii) \pr{X = 1} = $\frac{^3C_1}{8} = \frac{3}{8}   (\because 2 tails \equiv 1 head)$ \\\\
+    (viii) \pr{X = 3} = $\frac{^3C_3}{8} = \frac{1}{8}   (\because 0 tails \equiv 3 heads)$ \\\\
+    (ix) \pr{X \geq 1} = $\frac{8 - ^3C_0}{8} = \frac{7}{8}$    (\because atmost 2 tails \equiv atleast 1 head) \\\\ 
+\end{document}
